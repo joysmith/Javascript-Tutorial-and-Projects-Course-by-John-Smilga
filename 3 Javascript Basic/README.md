@@ -416,6 +416,8 @@ Variables #1
 
 <br>
 
+---
+
 - index.html (same template)
 - app.js
 
@@ -488,6 +490,8 @@ Concatenate Strings #2
 5. log "fullMailingAddress" in the console
 
 <br>
+
+---
 
 - index.html (same template)
 - app.js
@@ -584,6 +588,8 @@ Numbers #3
 9. log message
 
 <br>
+
+---
 
 ```js
 const score1 = 98;
@@ -747,57 +753,469 @@ console.log(friends[3]);
 
 ## Array Challenge <a id='38'></a>
 
+Arrays #4
+
+1. create "fruits" array and store some fruit values
+2. setup the last item as number (random)
+3. assign first fruit to the variable
+4. re-assign last array item to the actual fruit
+5. log both first fruit variable and entire fruits array
+
+<br>
+
+---
+
+- index.html (same template id=20)
+- app.js
+
+```js
+const fruits = ["apple", "banana", "orange", 45];
+
+const firstFruit = fruits[0];
+fruits[3] = "lemon";
+console.log(firstFruit, fruits);
+```
+
 <br>
 
 ## Functions - Declare, Invoke <a id='39'></a>
+
+- index.html (same template id=20)
+- app.js
+
+```js
+// Arrays, Functions and Objects
+// Functions - declare, invoke
+
+// function declaration
+function hello() {
+  // logic
+  console.log("Hello There Bob");
+  console.log("Hello There Anna");
+  console.log("Hello There Susy");
+}
+
+// function invocation
+hello();
+// come code here....
+hello();
+// come code here....
+hello();
+// come code here....
+```
 
 <br>
 
 ## Functions - Parameters, Arguments <a id='40'></a>
 
+- index.html (same template id=20)
+- app.js
+
+```js
+// Arrays, Functions and Objects
+// params - when declare/define
+// placeholders, local vars
+// arguments - when invoke/call/run
+// use vars/values, multiple params, undefined
+
+const bob = "Bob";
+const susy = "Susy";
+const anna = "Anna";
+
+// we haven't use let, const, var in front of name-variable in fun
+function greet(name) {
+  console.log("Hello there " + name);
+}
+
+// greet bob
+greet(4);
+// greet anna
+greet(anna);
+// greet susy
+greet("Susy");
+```
+
 <br>
 
 ## Functions - Return <a id='41'></a>
+
+- index.html (same template id=20)
+- app.js
+
+```js
+// Arrays, Functions and Objects
+// return
+// 1 inch 2.54cm
+
+const wallHeight = 80;
+
+function calculate(value) {
+  const newValue = value * 2.54;
+  return newValue;
+
+  // from here nothing will execute because of return above
+  console.log("hello");
+  console.log("hello");
+  console.log("hello");
+}
+
+calculate(200);
+const width = calculate(100);
+const height = calculate(wallHeight);
+
+const dimensions = [width, height];
+console.log(dimensions);
+```
 
 <br>
 
 ## Function Expressions <a id='42'></a>
 
+- index.html (same template id=20)
+- app.js
+
+```js
+// Arrays, Functions and Objects
+// expressions - another way define a function
+// create a variable, assign to FUNCTION (not value), use var
+// diff - hoisting, use - arrow func,libraries,
+
+// 1.way: function definition/declaration
+function addValues(num1, num2) {
+  return num1 + num2;
+}
+
+const firstValue = addValues(3, 4);
+const secondValue = addValues(12, 34);
+
+//2.way: function expression
+const add = function (num1, num2) {
+  return num1 + num2;
+};
+
+const thirdValue = add(5, 6);
+
+const values = [firstValue, secondValue, thirdValue, add(5, 6)];
+console.log(values);
+
+//3.way: arrow function
+const multiply = (num1, num2) => num1 * num2;
+```
+
 <br>
 
 ## Function Challenge <a id='43'></a>
+
+Functions #5
+
+1. create "calculateTotal" function
+2. add two parameters subTotal, tax
+3. return sum of parameters
+
+4. create 3 vars "order1","order2","order3"
+5. call calculateTotal, pass in some values and assign result to each order
+6. log all three orders
+7. refactor "calculateTotal" to function expression
+
+<br>
+
+---
+
+- index.html (same template id=20)
+- app.js
+
+```js
+const calculateTotal = function random(subTotal, tax) {
+  // const total = subTotal + tax;
+  // return total;
+  return subTotal + tax;
+};
+
+// console.log(calculateTotal(200, 20));
+
+const order1 = calculateTotal(100, 10);
+const order2 = calculateTotal(50, 5);
+const order3 = calculateTotal(25, 5);
+
+console.log(order1, order2, order3);
+```
 
 <br>
 
 ## Objects <a id='44'></a>
 
+- index.html (same template id=20)
+- app.js
+
+```js
+// Arrays, Functions and Objects
+// Objects - key/value pairs  methods
+// dot notation
+
+const person = {
+  // PROPERTY_NAME: PROPERTY
+  name: "john",
+  lastName: "peters",
+  age: 25,
+  education: false,
+  married: true,
+  siblings: ["anna", "susan", "peter"],
+  greeting() {
+    console.log("Hello my name is JOHN");
+  },
+};
+
+// How to store person-obj age
+const age = person.age;
+console.log(age);
+
+// How to modify name of person-obj
+person.name = "bob";
+console.log(person.name);
+
+// How to access person-obj array
+console.log(person.siblings[2]);
+
+// How to invoke person-obj method
+person.greeting();
+```
+
 <br>
 
 ## Object Challenge <a id='45'></a>
+
+Objects #6
+
+1. create car object
+2. add make, model, year, colors (array),
+   hybrid (boolean) keys
+3. add two methods (drive and stop)
+4. in the function body setup log with random text
+5. log make
+6. log first color
+7. invoke both methods
+
+<br>
+
+---
+
+- index.html (same template id=20)
+- app.js
+
+```js
+const car = {
+  make: "Dodge",
+  model: "Challenger",
+  year: 1970,
+  colors: ["black", "red"],
+  hybrid: false,
+  drive: function () {
+    console.log("driving...");
+  },
+  stop() {
+    console.log("stopped!!!");
+  },
+};
+
+console.log(car.make);
+console.log(car.colors[0]);
+car.drive();
+car.stop();
+```
 
 <br>
 
 ## Conditional Statements - Basics <a id='46'></a>
 
+- index.html (same template id=20)
+- app.js
+
+```js
+// Conditional Statements
+// >, <, >=, <=, ==, ===, !=, !===
+
+const value = 2 > 1;
+// console.log(typeof value);
+
+const value2 = 1 > 2;
+if (value2) {
+  console.log("hello world");
+} else {
+  console.log("hello people");
+}
+```
+
 <br>
 
 ## Conditional Statements Continued <a id='47'></a>
+
+- index.html (same template id=20)
+- app.js
+
+```js
+// Conditional Statements
+// Comparison Operators
+// >, <, >=, <=, ==, ===, !=, !==
+// else if and !
+
+const num1 = 6;
+const num2 = 6;
+const result = num1 >= num2;
+
+const value = false;
+
+// if value is false then run the code
+if (!value) {
+  console.log("value is false");
+}
+
+// if-else ladder
+// if (num1 > num2) {
+//   console.log('first number is bigger than second');
+// } else if (result) {
+//   console.log('first number equal to a second');
+// } else {
+//   console.log('second number is bigger than first');
+// }
+```
 
 <br>
 
 ## Equality <a id='48'></a>
 
+- index.html (same template id=20)
+- app.js
+
+```js
+// Conditional Statements
+// Comparison Operators
+// >, <, >=, <=, ==, ===, !=, !==
+// == checks only value
+// === checks value and type
+
+const num1 = 6;
+const num2 = "6";
+
+const value = num1 == num2; // true
+const value2 = num1 === num2; // false
+
+const value = num1 != num2; //
+const value2 = num1 !== num2; //
+
+console.log(value);
+console.log(value2);
+```
+
 <br>
 
 ## Logical Operators <a id='49'></a>
+
+- index.html (same template id=20)
+- app.js
+
+```js
+// Logical Operators
+// (|| - OR), (&& - AND), !
+
+const name = "peter";
+const age = 24;
+
+if (name !== "bob" && age === 24) {
+  console.log("hello there user");
+} else {
+  console.log("wrong values");
+}
+```
 
 <br>
 
 ## Switch Statement <a id='50'></a>
 
+- index.html (same template id=20)
+- app.js
+
+```js
+// Switch
+// dice values : 1 - 6
+
+const dice = 3;
+
+switch (dice) {
+  case 1:
+    console.log("you got one");
+    break;
+  case 2:
+    console.log("you got two");
+    break;
+  case 3:
+    console.log("you got three");
+    break;
+  default:
+    console.log("you did not roll the dice");
+}
+
+// else if, for reference
+// if (dice === 1) {
+//   console.log('you got one');
+// } else if (dice === 2) {
+//   console.log('you got two');
+// } else {
+//   console.log('you did not roll the dice');
+// }
+
+// all if, for reference
+// if (dice === 1) {
+//   console.log('you got one');
+// }
+// if (dice === 2) {
+//   console.log('you got two');
+// }
+// if (dice < 1 || dice > 6) {
+//   console.log('you did not roll the dice');
+// }
+```
+
 <br>
 
 ## Conditionals Challenge <a id='51'></a>
+
+Conditional Statements #7
+
+1. create two objects "person1", "person2"
+2. setup name,age (15-25),
+   status ('resident', 'tourist') keys
+
+3. setup if else, condition where
+   age must be bigger than 18 and status must be
+   equal to 'resident'
+4. test with both objects
+
+<br>
+
+---
+
+- index.html (same template id=20)
+- app.js
+
+```js
+const person1 = {
+  name: "susan",
+  age: 25,
+  status: "resident",
+};
+
+const person2 = {
+  name: "bobo",
+  age: 30,
+  status: "tourist",
+};
+
+if (person2.age >= 18 && person2.status === "resident") {
+  console.log("you can cast a vote");
+} else {
+  console.log("you are not eligible");
+}
+```
 
 <br>
 
