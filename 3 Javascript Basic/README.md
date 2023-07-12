@@ -273,29 +273,161 @@ console.log("hello world");
 
 ## Statements and Comments <a id='21'></a>
 
+- index.html (same template)
+- app.js
+
+```js
+// I woke,? up early!!!! him today.
+
+// statements - sets of instructions or anything that ends with ; (semi-colon)
+// comments - shortcut Command ctrl + /
+
+// this is console statement
+// console.log("hello world");
+console.log("hello people");
+
+/*
+console.log("hello people");
+console.log("hello my friend bob");
+console.log("hello susan");
+document.write("hello anna");
+*/
+```
+
 <br>
 
 ## Variables <a id='22'></a>
+
+- index.html (same template)
+- app.js
+
+```js
+// Variable feature - Most Basic Building Block
+// Variables use for - Store, Access, Modify === Value
+// Declare, Assignment Operator, Assign Value
+
+// variable declaration, assign value by using assingment operator
+let name = "john shrimp taco VI";
+
+// access variable
+console.log(name);
+// some code here
+console.log(name);
+// some code here
+console.log(name);
+// some code here
+console.log(name);
+// some code here
+console.log(name);
+// some code here
+console.log(name);
+// some code here
+```
 
 <br>
 
 ## Assign Variable Value Later <a id='23'></a>
 
+- index.html (same template)
+- app.js
+
+```js
+// Variable - Most Basic Building Block
+// Variables - Store, Access, Modify === Value
+// Declare, Assignment Operator, Assign Value
+// assign value later, modify existing
+
+let name = "john shrimp taco VI";
+
+// declaring variable assinging later
+let address, zip, state;
+address = "101 main street";
+zip = "60612";
+state = "CA";
+console.log(address, zip, state);
+
+// modifying variable
+name = "fish burrito ";
+
+console.log(name);
+```
+
 <br>
 
 ## Variable Naming Rules <a id='24'></a>
+
+- index.html (same template)
+- app.js
+
+```js
+// can contain digits, letters, underscore, $
+// must start with letter, $ or _
+
+// no keyword
+// cannot start with number
+
+// case sensitive - fullname vs Fullname
+
+// camelCase or underscore
+
+let full_name = "random";
+console.log(full_name);
+```
 
 <br>
 
 ## const, let, var <a id='25'></a>
 
-<br>
+- index.html (same template)
+- app.js
+
+```js
+// LET VS CONST VS VAR
+
+// using var
+var value = "some value";
+value = "some other value";
+// using let
+let name = "john";
+name = "peter";
+// using const (CONSTANT) - can't re-assign
+const lastName = "smith";
+
+console.log(value);
+console.log(name);
+console.log(lastName);
+```
+
+  <br>
 
 ## Challenges Intro <a id='26'></a>
 
 <br>
 
 ## Variables Challange <a id='27'></a>
+
+Variables #1
+
+1. create "firstName" and "last_name" variables
+2. assign your values
+3. create "address" variable and assign "main street" value to it
+4. re-assign address to "first street" later
+5. log all values in the console
+
+<br>
+
+- index.html (same template)
+- app.js
+
+```js
+const firstName = "john";
+const last_name = "smilga";
+
+let address = "main street";
+address = "first street";
+
+console.log(firstName, last_name, address);
+```
 
 <br>
 
