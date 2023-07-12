@@ -117,9 +117,115 @@
 
 ## Internal Javascript <a id='17'></a>
 
+```js
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basics</title>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <h4>hello people</h4>
+
+    <!--emmet shortcut: btn.btn*7{random button} -->
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+
+    <!-- How to internal inject js in html page  -->
+    <script>
+      document.querySelectorAll(".btn").forEach((item) => {
+        item.addEventListener("click", () => {
+          alert("this is good ");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+```
+
 <br>
 
 ## External Javascript <a id='18'></a>
+
+- index.html
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basics</title>
+  </head>
+  <body>
+    <a href="about.html">about</a>
+
+    <h1>home page</h1>
+    <h4>hello people</h4>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+
+    <!-- How to externally inject js using relative path -->
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+```
+
+---
+
+- about.html
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+  </head>
+  <body>
+    <a href="index.html">home</a>
+    <h4>about page</h4>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+
+    <!-- How to externally inject js using relative path -->
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+```
+
+---
+
+- app.js
+
+```js
+document.querySelectorAll(".btn").forEach((item) => {
+  item.addEventListener("click", () => {
+    alert("I will affect index.html, about.html alert-content from here only ");
+  });
+});
+```
 
 <br>
 
@@ -128,6 +234,40 @@
 <br>
 
 ## Helper Methods <a id='20'></a>
+
+- index.html
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basics</title>
+  </head>
+  <body>
+    <h1>javascript tutorial</h1>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+```
+
+---
+
+- app.js
+
+```js
+// How to write on browser page using write method
+document.write("hello world");
+
+// How to write on alert-popup
+alert("hello world");
+
+// How to write on dev console
+console.log("hello world");
+```
 
 <br>
 
