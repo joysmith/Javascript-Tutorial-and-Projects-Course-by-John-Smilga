@@ -1,0 +1,268 @@
+#### 14. [Basics Intro](#14)
+
+#### 15. [Basic Project](#15)
+
+#### 16. [Inline Javascript](#16)
+
+#### 17. [Internal Javascript](#17)
+
+#### 18. [External Javascript](#18)
+
+#### 19. [Cleanup Workspace](#19)
+
+#### 20. [Helper Methods](#20)
+
+#### 21. [Statements and Comments](#21)
+
+#### 22. [Variables](#22)
+
+#### 23. [Assign Variable Value Later](#23)
+
+#### 24. [Variable Naming Rules](#24)
+
+#### 25. [const, let, var](#25)
+
+#### 26. [Challenges Intro](#26)
+
+#### 27. [Variables Challange](#27)
+
+#### 28. [Prettier Settings](#28)
+
+#### 29. [Quotation Marks](#29)
+
+#### 30. [String Concatenation](#30)
+
+#### 31. [String Concat Challenge](#31)
+
+#### 32. [Numbers Basics](#32)
+
+#### 33. [Numbers - Additional Features](#33)
+
+#### 34. [Numbers Challenge](#34)
+
+#### 35. [Implicit Type Conversion](#35)
+
+#### 36. [Data Types](#36)
+
+#### 37. [Arrays](#37)
+
+#### 38. [Array Challenge](#38)
+
+#### 39. [Functions - Declare, Invoke](#39)
+
+#### 40. [Functions - Parameters, Arguments](#40)
+
+#### 41. [Functions - Return](#41)
+
+#### 42. [Function Expressions](#42)
+
+#### 43. [Function Challenge](#43)
+
+#### 44. [Objects](#44)
+
+#### 45. [Object Challenge](#45)
+
+#### 46. [Conditional Statements - Basics](#46)
+
+#### 47. [Conditional Statements Continued](#47)
+
+#### 48. [Equality](#48)
+
+#### 49. [Logical Operators](#49)
+
+#### 50. [Switch Statement](#50)
+
+#### 51. [Conditionals Challenge](#51)
+
+#### 52. [while Loops](#52)
+
+#### 53. [do while loops](#53)
+
+#### 54. [for loop](#54)
+
+---
+
+<br>
+
+## Basics Intro <a id='14'></a>
+
+<br>
+
+## Basic Project <a id='15'></a>
+
+<br>
+
+## Inline Javascript <a id='16'></a>
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java script interactive basic</title>
+  </head>
+  <body>
+    <h1>Sanity check</h1>
+
+    <!-- How to inject inline js in button-tag -->
+    <button onclick="alert('Alert box')">click me</button>
+  </body>
+</html>
+
+
+```
+
+<br>
+
+## Internal Javascript <a id='17'></a>
+
+<br>
+
+## External Javascript <a id='18'></a>
+
+<br>
+
+## Cleanup Workspace <a id='19'></a>
+
+<br>
+
+## Helper Methods <a id='20'></a>
+
+<br>
+
+## Statements and Comments <a id='21'></a>
+
+<br>
+
+## Variables <a id='22'></a>
+
+<br>
+
+## Assign Variable Value Later <a id='23'></a>
+
+<br>
+
+## Variable Naming Rules <a id='24'></a>
+
+<br>
+
+## const, let, var <a id='25'></a>
+
+<br>
+
+## Challenges Intro <a id='26'></a>
+
+<br>
+
+## Variables Challange <a id='27'></a>
+
+<br>
+
+## Prettier Settings <a id='28'></a>
+
+<br>
+
+## Quotation Marks <a id='29'></a>
+
+<br>
+
+## String Concatenation <a id='30'></a>
+
+<br>
+
+## String Concat Challenge <a id='31'></a>
+
+<br>
+
+## Numbers Basics <a id='32'></a>
+
+<br>
+
+## Numbers - Additional Features <a id='33'></a>
+
+<br>
+
+## Numbers Challenge <a id='34'></a>
+
+<br>
+
+## Implicit Type Conversion <a id='35'></a>
+
+<br>
+
+## Data Types <a id='36'></a>
+
+<br>
+
+## Arrays <a id='37'></a>
+
+<br>
+
+## Array Challenge <a id='38'></a>
+
+<br>
+
+## Functions - Declare, Invoke <a id='39'></a>
+
+<br>
+
+## Functions - Parameters, Arguments <a id='40'></a>
+
+<br>
+
+## Functions - Return <a id='41'></a>
+
+<br>
+
+## Function Expressions <a id='42'></a>
+
+<br>
+
+## Function Challenge <a id='43'></a>
+
+<br>
+
+## Objects <a id='44'></a>
+
+<br>
+
+## Object Challenge <a id='45'></a>
+
+<br>
+
+## Conditional Statements - Basics <a id='46'></a>
+
+<br>
+
+## Conditional Statements Continued <a id='47'></a>
+
+<br>
+
+## Equality <a id='48'></a>
+
+<br>
+
+## Logical Operators <a id='49'></a>
+
+<br>
+
+## Switch Statement <a id='50'></a>
+
+<br>
+
+## Conditionals Challenge <a id='51'></a>
+
+<br>
+
+## while Loops <a id='52'></a>
+
+<br>
+
+## do while loops <a id='53'></a>
+
+<br>
+
+## for loop <a id='54'></a>
+
+<br>
