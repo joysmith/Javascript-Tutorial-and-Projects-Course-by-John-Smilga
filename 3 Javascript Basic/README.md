@@ -273,7 +273,7 @@ console.log("hello world");
 
 ## Statements and Comments <a id='21'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -298,7 +298,7 @@ document.write("hello anna");
 
 ## Variables <a id='22'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -328,7 +328,7 @@ console.log(name);
 
 ## Assign Variable Value Later <a id='23'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -356,7 +356,7 @@ console.log(name);
 
 ## Variable Naming Rules <a id='24'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -378,7 +378,7 @@ console.log(full_name);
 
 ## const, let, var <a id='25'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -437,7 +437,7 @@ console.log(firstName, last_name, address);
 
 ## Quotation Marks <a id='29'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -451,7 +451,7 @@ console.log(name);
 
 ## String Concatenation <a id='30'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
   - uncomment websites name to visit diff site from dev-console
 
@@ -504,7 +504,7 @@ console.log(fullMailingAddress);
 
 ## Numbers Basics <a id='32'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -534,7 +534,7 @@ console.log(number3);
 
 ## Numbers - Additional Features <a id='33'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -672,7 +672,7 @@ document.querySelector(".form").addEventListener("submit", function (e) {
 
 ## Data Types <a id='36'></a>
 
-- index.html (same template)
+- index.html (same template id=20)
 - app.js
 
 ```js
@@ -713,6 +713,35 @@ console.log(typeof name);
 <br>
 
 ## Arrays <a id='37'></a>
+
+- index.html (same template id=20)
+- app.js
+
+```js
+// Arrays, Functions and Objects
+// Arrays - [], 0 index based
+
+// old way
+const friend1 = "anna";
+const friend2 = "anna";
+const friend3 = "anna";
+const friend4 = "anna";
+
+const friends = ["john", "peter", "bob", "susy", 45, undefined, null];
+
+// accessing array
+let bestFriend = friends[2];
+
+// assingning new value to array
+friends[4] = "anna";
+
+console.log(friends);
+console.log(friends[4]);
+
+console.log(bestFriend);
+
+console.log(friends[3]);
+```
 
 <br>
 
