@@ -410,9 +410,79 @@ value ? console.log("value is true") : console.log("value is false");
 
 ## Global Scope <a id='66'></a>
 
+- index.html (same template id=55)
+- app.js
+
+```js
+// Global Scope vs Local Scope
+// any variable outside code block {} is said to be in Global Scope
+// can be accesss anywhere in the program
+// Gotchas : name collisions, modify by mistake
+
+let name = "bobo";
+name = "peter";
+
+// modify name-var in functional block
+function calculate() {
+  // some other code...
+  console.log(name);
+  name = "orange";
+  function inner() {
+    name = "inner name value";
+    console.log(`this is from inner function ${name}`);
+  }
+  inner();
+}
+calculate();
+
+// modify name-var in conditional block
+if (true) {
+  // some other code...
+  console.log(name);
+  name = "pants";
+}
+
+console.log(`my name is ${name} and I'm awesome`);
+```
+
 <br>
 
 ## Local Scope <a id='67'></a>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+// Local Scope
+// can not be access from outside code blocks
+// if - NOT VAR
+
+let name = "bobo";
+
+function calculate() {
+  const name = "john";
+  const age = 25;
+  // code goes here
+
+  // JS is saying since you haven't declared it, i'm gonna create 'becomeGlobal' global-scope-variable for you
+  becomesGlobal = "global variable";
+}
+
+calculate();
+console.log(becomesGlobal);
+
+if (true) {
+  const name = "john";
+}
+
+{
+  const name = "john";
+  const special = "special";
+}
+console.log(special);
+
+console.log(`my name is ${name} and I'm awesome`);
+```
 
 <br>
 
