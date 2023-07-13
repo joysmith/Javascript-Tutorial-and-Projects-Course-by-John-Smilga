@@ -1,27 +1,10 @@
-// String properties and methods
-// wrapper String Object, don't memorize methods
+//  Null and Undefined
+// both represent "no value"
 
-let text = " Peter Jordan";
-let result = text.length;
-console.log(result);
+// Undefined - "javascript can not find value for this", done by javascript
 
-console.log(text.length);
-console.log(text.toLowerCase());
-console.log(text.toUpperCase());
-console.log(text.charAt(0));
-console.log(text.charAt(text.length - 1));
-console.log(text.indexOf("e"));
-console.log(text);
+// variable without value
+// missing function arguments
+// missing obj arguments
 
-// Remove white space
-console.log(text.trim());
-
-// How to do method chaning on string
-console.log(text.trim().toLowerCase().startsWith("peter"));
-
-// Does this string has eter
-console.log(text.includes("eter"));
-
-// give me a substring
-console.log(text.slice(0, 2));
-console.log(text.slice(-3));
+// null - "developer sets the value", done by developer

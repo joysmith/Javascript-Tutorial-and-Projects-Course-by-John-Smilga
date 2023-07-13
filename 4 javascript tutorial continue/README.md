@@ -68,6 +68,10 @@
 
 ## Connecting The Dots <a id='55'></a>
 
+<br>
+
+## String Properties and Methods <a id='56'></a>
+
 - index.html
 
 ```html
@@ -134,23 +138,148 @@ console.log(text.slice(-3));
 
 <br>
 
-## String Properties and Methods <a id='56'></a>
-
-<br>
-
 ## Template Literals <a id='57'></a>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+// Template Literals - ES6+
+// Backtick characters `` - above tab (left from one)
+// Interpolation ${} - insert expression(value)
+
+// old way
+const name = "john";
+const age = 25;
+const sentence = "Hey it's " + name + " and he is " + age + " years old";
+
+// Template literal
+const value = `Hey it's ${name} and he is ${age} years old. And here is some simple math ${
+  4 + 4
+}`;
+console.log(value);
+
+console.log(sentence);
+```
 
 <br>
 
 ## Strings Challenge <a id='58'></a>
 
+Strings #8
+
+1. create function fullName
+2. accept two parameters "firstName", "lastName"
+3. add them together (concat) and return result in uppercase
+4. invoke fullName and pass some values
+5. log result
+6. change the order of arguments
+7. refactor to object parameter
+   <br>
+
+---
+
+- index.html (same template id=55)
+- app.js
+
+```js
+// function fullName(firstName, lastName) {
+//   const fullName = `${firstName} ${lastName}`;
+//   return fullName.toUpperCase();
+// }
+// console.log(fullName('john', 'smith'));
+
+function fullName({ firstName, lastName }) {
+  const fullName = `${firstName} ${lastName}`;
+  return fullName.toUpperCase();
+}
+
+// refactor: pass input in any order
+console.log(fullName({ lastName: "jordan", firstName: "peter" }));
+```
+
 <br>
 
 ## Array Properties and Methods <a id='59'></a>
 
-<br>
+- index.html (same template id=55)
+- app.js
+
+```js
+// Array Properties and Methods
+let names = ["john", "bobo", "barry", "olga", "ben"];
+
+//length: how to get length of an array
+console.log(names.length);
+console.log(names[names.length - 1]);
+
+// concat: How to combine two array
+const lastNames = ["pepper", "onion", "banana"];
+const allNames = names.concat(lastNames);
+console.log(allNames);
+
+// reverse: how to get reverse array
+console.log(allNames.reverse());
+
+//unshift: how to add item at the beginning of array
+allNames.unshift("susy");
+allNames.unshift("anna");
+console.log(allNames);
+
+//shift: how to remove item at the beginning of array
+allNames.shift();
+allNames.shift();
+allNames.shift();
+allNames.shift();
+console.log(allNames);
+
+//push: how to add item at the end of array
+allNames.push("susy");
+console.log(allNames);
+
+//pop: how to remove item at the end of array
+allNames.pop();
+console.log(allNames);
+
+// splice - mutates original array: how delete item from original array
+const specificNames = allNames.splice(0, 3);
+console.log(specificNames);
+console.log(allNames);
+```
+
+- <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">javascript array methods W3School</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">javascript array methods MDN</a>
+  <br>
 
 ## Exercise - Full Name <a id='60'></a>
+
+<br>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+// Arrays and for loop
+
+const names = ["anna", "susy", "bob"];
+const lastName = "shakeandbake";
+let newArray = [];
+
+//for loop
+for (let i = 0; i < names.length; i++) {
+  console.log(i);
+  console.log(names[i]);
+
+  // combine firstname and lastname
+  const fullName = `${names[i]} ${lastName}`;
+
+  // put fullname in new array
+  newArray.push(fullName);
+}
+
+console.log(names);
+console.log(newArray);
+```
 
 <br>
 
@@ -160,17 +289,122 @@ console.log(text.slice(-3));
 
 ## Value vs Reference <a id='62'></a>
 
+- index.html (same template id=55)
+- app.js
+
+```js
+// Refernce vs Value
+// Primitive Data Types
+// String, Number, Symbol, Boolean, Undefined, Null,
+// Arrays, Functions, Objects = object
+// typeof
+
+// when assigning primitive data type value to a variable any changes are made directly to that value, without affecting original value
+
+// when assigning non-primitive data type value to a variable is done by reference so any changes will affect all the references.
+
+const number = 1;
+let number2 = number;
+number2 = 7;
+console.log(`the first value is ${number}`);
+console.log(`the second value is ${number2}`);
+
+let person = { name: "bob" };
+
+// CASE 1
+// copy the person reference/address to person2-obj
+// let person2 = person;
+
+// CASE 2
+// pass/copy the value of peron to person2 variable not the reference/address
+let person2 = { ...person };
+person2.name = "susy";
+
+console.log(`the name of the first person is ${person.name}`);
+console.log(`the name of the second person is ${person2.name}`);
+```
+
 <br>
 
 ## Null and Undefined <a id='63'></a>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+//  Null and Undefined
+// both represent "no value"
+
+// Undefined - "javascript can not find value for this", done by javascript
+
+// variable without value
+// missing function arguments
+// missing obj arguments
+
+// null - "developer sets the value", done by developer
+```
 
 <br>
 
 ## Truthy and Falsy <a id='64'></a>
 
+- index.html (same template id=55)
+- app.js
+
+```js
+// Truthy and Falsy
+// Truthy value:"anything", 1, true
+// Falsy value: "",'',``,0 ,-0 ,NaN ,false, null, undefined
+
+const bool1 = true;
+const bool2 = 2 > 1;
+
+const text = "life";
+
+if (text) {
+  // "anything" give truthy
+  console.log("hey the value Truthy");
+} else {
+  // "" give falsy
+  console.log("hey the value Falsy");
+}
+
+// if (bool1) {
+//   console.log(`Hey it works!`);
+// }
+// if (bool2) {
+//   console.log(`Hey it also works!`);
+// }
+```
+
 <br>
 
 ## Ternary Operator <a id='65'></a>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+// unary operator -  typeof
+let text = "some text";
+// console.log(typeof text); // operand
+
+// binary operator - assignment
+let number = 3;
+let number2 = 2 + 5;
+
+// ternary operator
+// condition ? (runs if true) : (runs if false)
+const value = 1 < 0;
+value ? console.log("value is true") : console.log("value is false");
+
+// for ref.
+// if (value) {
+//   console.log('value is true');
+// } else {
+//   console.log('value is false');
+// }
+```
 
 <br>
 
