@@ -1,0 +1,6 @@
+console.log(window)
+console.dir(window)
+console.log(eventName) 
+
+event-obj
+window-obj

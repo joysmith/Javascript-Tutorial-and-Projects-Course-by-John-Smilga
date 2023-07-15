@@ -492,33 +492,226 @@ console.log(`my name is ${name} and I'm awesome`);
 
 ## Callback Functions, Higher Order Functions <a id='69'></a>
 
+- index.html (same template id=55)
+- app.js
+
+```js
+// callback
+function morning(name) {
+  return `Good morning ${name.toUpperCase()}`;
+}
+function afternoon(name) {
+  return `Good afternoon ${name.repeat(3)}`;
+}
+
+// Higher order function
+function greet(name, cb) {
+  const myName = "john";
+  console.log(`${cb(name)}, my name is ${myName}`);
+}
+
+greet("bobo", morning);
+greet("peter", afternoon);
+
+// Callback Functions, Higher Order Functions, Functions as First Class Objects/Citizens
+// Functions are first class objects - stored in a variable (expression), passed as an argument to another function, return from the function (closure)
+
+// Higher Order function - accepts another function as an argument or returns another function as a result
+
+// Callback Function - passed to a another function as an an argument and executed inside that function
+
+// function greetMorning(name) {
+//   const myName = 'john';
+//   console.log(`Good morning ${name}, my name is ${myName}`);
+// }
+// function greetAfternoon(name) {
+//   const myName = 'susan';
+//   console.log(`Good afternoon ${name}, my name is ${myName}`);
+// }
+```
+
 <br>
 
 ## Array Iterators <a id='70'></a>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+// Powerfull Array Methods
+// forEach, map, filter, find, reduce
+// Iterate over array - no for loop required
+// Accept CALLBACK function as an argument, calls Callback against each item in a array. Reference Item in the Callback Paramater.
+
+const numbers = [0, 1, 2, 3, 4];
+
+// show all numbers
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+```
 
 <br>
 
 ## forEach <a id='71'></a>
 
+- index.html (same template id=55)
+- app.js
+
+```js
+// forEach
+// does not return new array
+// In 1-named function, 2-anonymous function setup, we are not invoking() function.
+
+const people = [
+  { name: "bob", age: 20, position: "developer" },
+  { name: "peter", age: 25, position: "designer" },
+  { name: "susy", age: 30, position: "the boss" },
+];
+
+//1 way: Callback Setup using named function
+function showPerson(person) {
+  console.log(person.position.toUpperCase());
+}
+people.forEach(showPerson);
+
+//2 way: Callback Setup using anonymous function
+people.forEach(function (item) {
+  console.log(item.position.toUpperCase());
+});
+```
+
 <br>
 
 ## map <a id='72'></a>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+// map
+// does return a new array
+// does not change size of original array
+// uses values from original array when making new one
+
+const people = [
+  { name: "bob", age: 20, position: "developer" },
+  { name: "peter", age: 25, position: "designer" },
+  { name: "susy", age: 30, position: "the boss" },
+  { name: "anna", age: 35, position: "the boss" },
+];
+
+const ages = people.map(function (person) {
+  return person.age + 20;
+});
+
+const newPeople = people.map(function (person) {
+  return {
+    firstName: person.name.toUpperCase(),
+    oldAge: person.age + 20,
+  };
+});
+
+const names = people.map(function (person) {
+  return `<h1>${person.name}</h1>`;
+});
+
+document.body.innerHTML = names.join("");
+
+console.log(names);
+```
 
 <br>
 
 ## filter <a id='73'></a>
 
+- index.html (same template id=55)
+- app.js
+
+```js
+// filter
+// does return a new array
+// can manipulate the size of new array
+// returns based on condition
+
+const people = [
+  { name: "bob", age: 20, position: "developer" },
+  { name: "peter", age: 25, position: "designer" },
+  { name: "susy", age: 30, position: "the boss" },
+  { name: "anna", age: 35, position: "the boss" },
+];
+
+const youngPeople = people.filter(function (person) {
+  return person.age <= 25;
+});
+console.log(youngPeople);
+
+const developers = people.filter(function (person) {
+  return person.position === "developer";
+});
+
+console.log(developers);
+```
+
 <br>
 
 ## find <a id='74'></a>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+// find
+// returns single instance - (in this case object)
+// returns first match, if no match undefined
+// great for getting unique value
+
+const people = [
+  { name: "bob", age: 20, position: "developer", id: 1 },
+  { name: "peter", age: 25, position: "designer", id: 2 },
+  { name: "susy", age: 30, position: "the boss", id: 3 },
+  { name: "anna", age: 35, position: "the boss", id: 4 },
+];
+
+// case 1: list of string
+const names = ["bob", "peter", "susy"];
+console.log(
+  names.find(function (name) {
+    // return name === "zelda";
+    return name === "bob";
+  })
+);
+
+// case 2: list of object
+const person = people.find(function (person) {
+  return person.id === 3;
+});
+
+console.log(person);
+```
 
 <br>
 
 ## reduce <a id='75'></a>
 
+- index.html (same template id=55)
+- app.js
+
+```js
+
+```
+
 <br>
 
 ## Array Challenge - Intro <a id='76'></a>
+
+- index.html (same template id=55)
+- app.js
+
+```js
+
+```
 
 <br>
 
