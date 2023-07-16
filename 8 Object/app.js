@@ -1,49 +1,40 @@
-// nested objects
-// 1a. set variable as property value
-// 1b. dot notation vs bracket notation
+/* In Reg Functions (not arrow) "this"
+determined by "HOW"!!! a function is invoked (left of .)
 
-// step 1a: how to set variable as obj-property value
-const age = 40;
+defaults to global - window
+arrow functions - pump the breaks
+*/
 
-// step 1b. how to set variable as obj-property value
-let random = "random-value";
+// console.log(this);
 
-random = "age";
+// showThis fun. will point to window-obj which is a default-obj
+function showThis() {
+  console.log(this);
+}
 
-const person = {
+// showThis fun. will point to john-obj
+const john = {
   name: "john",
-
-  // step 2a: modify obj-value using variable
-  age: age,
-  married: true,
-  siblings: ["anna", "peter"],
-  greet: function (name) {
-    console.log(`Hello, my name is ${name}`);
-  },
-  sayHello(name) {
-    console.log(`Hello, my name is ${name}`);
-  },
-
-  // how to create nested obj
-  job: {
-    title: "developer",
-    company: {
-      name: "coding addict",
-      address: "123 main street",
-    },
-  },
-
-  // step 2b: how to use string to write key
-  "random-value": "random",
+  showThis: showThis,
 };
 
-console.log(person.job.title);
-console.log(person.job.company.address);
-console.log(person);
+// showThis fun. will point to bob-obj
+const bob = {
+  name: "bob",
+  showThis: showThis,
+};
 
-console.log(person["name"]);
+john.showThis(); // john-obj
+bob.showThis(); //bob-obj
 
-// step 3b: how to access obj-key using bracket notation
-console.log(person["random-value"]);
+showThis(); // window-obj
+const btn1 = document.querySelector(".btn-1");
+const btn2 = document.querySelector(".btn-2");
 
-console.log(person[random]);
+btn1.addEventListener("click", showThis); // btn1-obj
+btn2.addEventListener("click", showThis); // btn2-obj
+
+btn2.addEventListener("click", function () {
+  // point to window-obj, because we are calling it inside anonymous fun, not declaring it as a call-back
+  showThis();
+});

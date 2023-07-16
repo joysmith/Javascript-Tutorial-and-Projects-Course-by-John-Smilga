@@ -180,18 +180,39 @@ console.log(person[random]);
 
 ## 'this' - Keyword Basics<a id='209'></a>
 
-- index.html
-
-```html
-
-```
+- index.html (same template id=207)
 
 ---
 
 - app.js
 
 ```js
+// this
+// points to the left of the dot
 
+const john = {
+  firstName: "john",
+  lastName: "anderson",
+  fullName: function () {
+    console.log(this);
+
+    // how to use this keywork to access obj-keyvalue to generate data dynamically
+    console.log(`My full name is ${this.firstName} ${this.lastName}`);
+  },
+};
+const bob = {
+  firstName: "peter",
+  lastName: "sanders",
+  fullName: function () {
+    console.log(this);
+
+    // how to use this keywork to access obj-keyvalue to generate data dynamically
+    console.log(`My full name is ${this.firstName} ${this.lastName}`);
+  },
+};
+
+john.fullName();
+bob.fullName();
 ```
 
 <br>
@@ -201,7 +222,30 @@ console.log(person[random]);
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Tutorial</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      h1 {
+        letter-spacing: 2px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Objects</h1>
+    <button class="btn-1">click me</button>
+    <button class="btn-2">click me</button>
+    <script src="./app.js"></script>
+  </body>
+</html>
 ```
 
 ---
@@ -209,7 +253,46 @@ console.log(person[random]);
 - app.js
 
 ```js
+/* In Reg Functions (not arrow) "this"
+determined by "HOW"!!! a function is invoked (left of .)
 
+defaults to global - window
+arrow functions - pump the breaks
+*/
+
+// console.log(this);
+
+// showThis fun. will point to window-obj which is a default-obj
+function showThis() {
+  console.log(this);
+}
+
+// showThis fun. will point to john-obj
+const john = {
+  name: "john",
+  showThis: showThis,
+};
+
+// showThis fun. will point to bob-obj
+const bob = {
+  name: "bob",
+  showThis: showThis,
+};
+
+john.showThis(); // john-obj
+bob.showThis(); //bob-obj
+
+showThis(); // window-obj
+const btn1 = document.querySelector(".btn-1");
+const btn2 = document.querySelector(".btn-2");
+
+btn1.addEventListener("click", showThis); // btn1-obj
+btn2.addEventListener("click", showThis); // btn2-obj
+
+btn2.addEventListener("click", function () {
+  // point to window-obj, because we are calling it inside anonymous fun, not declaring it as a call-back
+  showThis();
+});
 ```
 
 <br>
