@@ -1,22 +1,28 @@
-// event propogation - order the events are fired
-// event bubbling - clicked element first then bubbles up -- default
-// event capturing - fires at the root and fires until reaches target
+/* 
+The load event is fired when the whole page has loaded,
+ including all dependent resources such as stylesheets and images. 
+ This is in contrast to DOMContentLoaded, which is fired as soon as the page DOM has been loaded,
+without waiting for resources to finish loading.
 
-const container = document.querySelector('.container');
-const list = document.querySelector('.list-items');
+window.addEventListener('load', function () {
+  // your code goes here
+});
 
-function showBubbling(e) {
-  console.log('current target', e.currentTarget);
-  // console.log('target', e.target);
-  // if (e.target.classList.contains('link')) {
-  //   console.log('you clicked on the link');
-  // }
-}
-function stopPropogation(e) {
-  e.stopPropagation();
-}
+*/
 
-list.addEventListener('click', showBubbling, { capture: true });
-container.addEventListener('click', showBubbling, { capture: true });
-document.addEventListener('click', showBubbling, { capture: true });
-window.addEventListener('click', showBubbling, { capture: true });
+// Case 1
+window.addEventListener("load", function () {
+  console.log("I will run second");
+  const img = document.querySelector("img");
+  console.log(img);
+  console.log(img.width);
+});
+
+// Case 2
+window.addEventListener("DOMContentLoaded", function () {
+  console.log("DOMContentLoaded I will run first");
+
+  const img = document.querySelector("img");
+  console.log(img);
+  console.log(img.width);
+});

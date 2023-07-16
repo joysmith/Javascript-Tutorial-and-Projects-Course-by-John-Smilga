@@ -1065,7 +1065,49 @@ btns.forEach((btn) => {
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        border: none;
+        display: inline-block;
+        margin: 0.5rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="list-items">
+        <li class="item"><a href="#" class="link">link</a></li>
+        <li class="item"><a href="#" class="link">link</a></li>
+        <li class="item"><a href="#" class="link">link</a></li>
+      </ul>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
 ```
 
 ---
@@ -1073,7 +1115,28 @@ btns.forEach((btn) => {
 - app.js
 
 ```js
+// event propogation - order the events are fired
+// event bubbling - clicked element first then bubbles up -- default
+// event capturing - fires at the root and fires until reaches target
 
+const container = document.querySelector(".container");
+const list = document.querySelector(".list-items");
+
+function showBubbling(e) {
+  console.log("current target", e.currentTarget);
+  // console.log('target', e.target);
+  // if (e.target.classList.contains('link')) {
+  //   console.log('you clicked on the link');
+  // }
+}
+function stopPropogation(e) {
+  e.stopPropagation();
+}
+
+list.addEventListener("click", showBubbling, { capture: true });
+container.addEventListener("click", showBubbling, { capture: true });
+document.addEventListener("click", showBubbling, { capture: true });
+window.addEventListener("click", showBubbling, { capture: true });
 ```
 
 <br>
@@ -1101,7 +1164,47 @@ btns.forEach((btn) => {
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        border: none;
+        display: inline-block;
+        margin: 0.5rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="form">
+      <input type="text" id="name" />
+      <input type="password" id="password" />
+      <input type="submit" value="submit" />
+    </form>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
 ```
 
 ---
@@ -1109,7 +1212,21 @@ btns.forEach((btn) => {
 - app.js
 
 ```js
+// submit event listener
+// prevent default
+// how to get a value
 
+const form = document.getElementById("form");
+const name = document.getElementById("name");
+const password = document.getElementById("password");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  console.log("form submitted");
+  console.log(name.value);
+  console.log(password.value);
+});
 ```
 
 <br>
@@ -1119,15 +1236,67 @@ btns.forEach((btn) => {
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ES6</title>
+    <style>
+      body {
+        text-transform: capitalize;
+      }
+      .btn {
+        background: #f15025;
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ES6</h1>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
 ```
 
 ---
 
+- How to access local storage in chrome
+  - Dev console -> Application tab => LacalStorage
 - app.js
 
 ```js
+// Web Storage API - provided by browser
+// session storage, local storage
+// setItem, getItem , removeItem, clear
 
+// localStorage.setItem('name','john')
+// sessionStorage.setItem('name','john')
+
+// How to store item in browser locaStorage
+localStorage.setItem("name", "john");
+localStorage.setItem("friend", "peter");
+localStorage.setItem("job", "developer");
+localStorage.setItem("address", "street 123");
+
+// How to access item from browser localstorage
+const name = localStorage.getItem("name");
+console.log(name);
+
+// How to remove item from browser localstorage
+localStorage.removeItem("name");
+
+const anotherName = localStorage.getItem("name");
+console.log(anotherName);
+
+// How to clear browser loacal storage
+localStorage.clear();
 ```
 
 <br>
@@ -1137,15 +1306,65 @@ btns.forEach((btn) => {
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ES6</title>
+    <style>
+      body {
+        text-transform: capitalize;
+      }
+      .btn {
+        background: #f15025;
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ES6</h1>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
 ```
 
 ---
 
+- How to access local storage in chrome
+
+  - Dev console -> Application tab => LacalStorage
+
 - app.js
 
 ```js
+// JSON.stringify(), JSON.parse
 
+const friends = ["john", "peter", "bob"];
+// How to store array in browser locastorage with JSON.stringify()
+localStorage.setItem("friends", JSON.stringify(friends));
+
+// How to store access in browser locastorage with JSON.parse()
+const values = JSON.parse(localStorage.getItem("friends"));
+console.log(values[2]);
+
+let fruits;
+
+if (localStorage.getItem("fruits")) {
+  fruits = JSON.parse(localStorage.getItem("fruits"));
+} else {
+  fruits = [];
+}
+console.log(fruits);
+// fruits.push('apple');
+fruits.push("orange");
+localStorage.setItem("fruits", JSON.stringify(fruits));
 ```
 
 <br>
@@ -1209,7 +1428,20 @@ btns.forEach((btn) => {
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <img src="./photo.jpg" alt="" />
+    <script src="./app.js"></script>
+  </body>
+</html>
 ```
 
 ---
@@ -1217,7 +1449,34 @@ btns.forEach((btn) => {
 - app.js
 
 ```js
+/* 
+The load event is fired when the whole page has loaded,
+ including all dependent resources such as stylesheets and images. 
+ This is in contrast to DOMContentLoaded, which is fired as soon as the page DOM has been loaded,
+without waiting for resources to finish loading.
 
+window.addEventListener('load', function () {
+  // your code goes here
+});
+
+*/
+
+// Case 1: event fire when all assets are loaded
+window.addEventListener("load", function () {
+  console.log("I will run second");
+  const img = document.querySelector("img");
+  console.log(img);
+  console.log(img.width);
+});
+
+// Case 2
+window.addEventListener("DOMContentLoaded", function () {
+  console.log("DOMContentLoaded I will run first");
+
+  const img = document.querySelector("img");
+  console.log(img);
+  console.log(img.width);
+});
 ```
 
 <br>
@@ -1227,7 +1486,20 @@ btns.forEach((btn) => {
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <img src="./photo.jpg" alt="" />
+    <script src="./app.js"></script>
+  </body>
+</html>
 ```
 
 ---
@@ -1235,7 +1507,26 @@ btns.forEach((btn) => {
 - app.js
 
 ```js
+/* 
+Scroll Event - on element or document 
 
+  window.addEventListener('scroll', function () {
+  console.log(window.scrollY + 'px');
+  console.log(window.scrollX + 'px');
+});
+
+document
+
+scrollY - returns the number of pixels the document is currently scrolled along the vertical axis (pageYOffset)
+
+
+scrollX - returns the number of pixels scrolled along the horizontal axis (pageXOffset)
+*/
+
+window.addEventListener("scroll", function () {
+  console.log(window.scrollY + "px");
+  console.log(window.scrollX + "px");
+});
 ```
 
 <br>
@@ -1245,7 +1536,34 @@ btns.forEach((btn) => {
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <style>
+      .btn {
+        margin: 1rem;
+        font-size: 1.5rem;
+      }
+      .box {
+        margin: 1rem;
+        margin-left: -3rem;
+        width: 150px;
+        height: 150px;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <button class="btn">click me</button>
+    <div class="box"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
 ```
 
 ---
@@ -1253,7 +1571,25 @@ btns.forEach((btn) => {
 - app.js
 
 ```js
+/*
+innerWidth - The read-only Window property the interior width of the window in pixels
 
+innerHeight - The read-only property of the Window interface returns the interior height of the window in pixels
+
+The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport.
+
+ */
+
+console.log("height : " + window.innerWidth);
+console.log("width : " + window.innerHeight);
+
+const btn = document.querySelector(".btn");
+const box = document.querySelector(".box");
+
+btn.addEventListener("click", function () {
+  const values = box.getBoundingClientRect();
+  console.log(values);
+});
 ```
 
 <br>
@@ -1263,7 +1599,19 @@ btns.forEach((btn) => {
 - index.html
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <img src="./photo.jpg" alt="" />
+  </body>
+</html>
 ```
 
 ---
@@ -1271,5 +1619,13 @@ btns.forEach((btn) => {
 - app.js
 
 ```js
+/*
+The resize event fires when the document view (window) has been resized.
+ */
 
+window.addEventListener("resize", function () {
+  console.log(window.innerWidth);
+});
 ```
+
+- run local server and resize window
