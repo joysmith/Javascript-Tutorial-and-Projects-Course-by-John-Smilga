@@ -657,12 +657,13 @@ btn.addEventListener("click", function () {
 
 ---
 
-- In app.js, the process of adding event
+- In app.js, setup process of event
   - Step 1: select element
   - Step 2: addEventListener()
   - Step 3: what event, what to do
 
 ```js
+// setup process of event-
 // Step 1: select element
 // Step 2: addEventListener()
 // Step 3: what event, what to do
@@ -725,6 +726,7 @@ btn.addEventListener("click", function () {
 - app.js
 
 ```js
+// setup process of event
 // Step 1: select element
 // Step 2: addEventListener()
 // Step 3: what event, what to do
