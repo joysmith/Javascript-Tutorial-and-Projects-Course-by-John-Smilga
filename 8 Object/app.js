@@ -1,40 +1,28 @@
-/* In Reg Functions (not arrow) "this"
-determined by "HOW"!!! a function is invoked (left of .)
+class Account {
+  // notice: set bank-property without any let, const keyword
+  constructor(name, initialBalance) {
+    this.name = name;
+    this.balance = initialBalance;
+  }
 
-defaults to global - window
-arrow functions - pump the breaks
-*/
+  // notice: set bank-property without any let, const keyword
+  bank = "Chase";
 
-// console.log(this);
-
-// showThis fun. will point to window-obj which is a default-obj
-function showThis() {
-  console.log(this);
+  // notice: set deposit without function-keyword
+  deposit(amount) {
+    this.balance += amount;
+    console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+  }
 }
 
-// showThis fun. will point to john-obj
-const john = {
-  name: "john",
-  showThis: showThis,
-};
+const john = new Account("john", 0);
+console.log(john);
+console.log(john.name);
+john.deposit(500);
+console.log(john.bank);
 
-// showThis fun. will point to bob-obj
-const bob = {
-  name: "bob",
-  showThis: showThis,
-};
-
-john.showThis(); // john-obj
-bob.showThis(); //bob-obj
-
-showThis(); // window-obj
-const btn1 = document.querySelector(".btn-1");
-const btn2 = document.querySelector(".btn-2");
-
-btn1.addEventListener("click", showThis); // btn1-obj
-btn2.addEventListener("click", showThis); // btn2-obj
-
-btn2.addEventListener("click", function () {
-  // point to window-obj, because we are calling it inside anonymous fun, not declaring it as a call-back
-  showThis();
-});
+const bob = new Account("bob", 700);
+console.log(bob);
+console.log(bob.name);
+bob.deposit(1000);
+console.log(bob.bank);

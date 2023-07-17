@@ -253,7 +253,7 @@ bob.fullName();
 - app.js
 
 ```js
-/* In Reg Functions (not arrow) "this"
+/* In Regular-named-Functions (not arrow) "this"
 determined by "HOW"!!! a function is invoked (left of .)
 
 defaults to global - window
@@ -264,6 +264,7 @@ arrow functions - pump the breaks
 
 // showThis fun. will point to window-obj which is a default-obj
 function showThis() {
+  // show pointing obj
   console.log(this);
 }
 
@@ -279,10 +280,11 @@ const bob = {
   showThis: showThis,
 };
 
-john.showThis(); // john-obj
-bob.showThis(); //bob-obj
+john.showThis(); // "this" point to john-obj
+bob.showThis(); // "this" point to bob-obj
 
-showThis(); // window-obj
+showThis(); // "this" point to window-obj
+
 const btn1 = document.querySelector(".btn-1");
 const btn2 = document.querySelector(".btn-2");
 
@@ -299,83 +301,184 @@ btn2.addEventListener("click", function () {
 
 ## Factory Functions<a id='211'></a>
 
-- index.html
-
-```html
-
-```
+- index.html (same template id=207)
 
 ---
 
 - app.js
 
 ```js
+// Two ways to setup up BluePrint or template
+// 1. Factory Functions,  2. Constructor Functions
+// Factory Functions
 
+// --------old way writing obj directly-------
+// const john = {
+//   firstName: 'john',
+//   lastName: 'anderson',
+//   fullName: function () {
+//     console.log(
+//       `My full name is ${this.firstName} ${this.lastName} and I love JS`
+//     );
+//   },
+// };
+// const bob = {
+//   firstName: 'peter',
+//   lastName: 'sanders',
+//   fullName: function () {
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+
+// How to define factory function
+function createPerson(firstName, lastName) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    fullName: function () {
+      console.log(
+        `My full name is ${this.firstName} ${this.lastName} and I love JS`
+      );
+    },
+  };
+}
+
+// how to create person-obj with dynamic property without new-keyword
+const john = createPerson("john", "anderson");
+john.fullName();
+
+const bob = createPerson("susy", "apple");
+bob.fullName();
+
+const susy = createPerson("bob", "jordan");
+susy.fullName();
 ```
 
 <br>
 
 ## Constructor Functions<a id='212'></a>
 
-- index.html
-
-```html
-
-```
+- index.html (same template id=207)
 
 ---
 
 - app.js
 
 ```js
+// Blue Print
+// Factory Functions and Constructor Functions
+// Constructor Functions
+// new - creates new object, points to it, omit return
 
+// how to define constructor function
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.fullName = function () {
+    console.log(
+      `My full name is ${this.firstName} ${this.lastName} and I love React`
+    );
+  };
+  console.log(this);
+}
+
+// how to create person obj with new-keyword
+const john = new Person("john", "anderson");
+john.fullName();
+const bob = new Person("bob", "jordan");
+bob.fullName();
 ```
 
 <br>
 
 ## Constructor Property<a id='213'></a>
 
-- index.html
-
-```html
-
-```
+- index.html (same template id=207)
 
 ---
 
 - app.js
 
 ```js
+// All Objects in Javascript have access to constructor property that returns a constructor function that created it.
+// built in constructor functions
+// arrays and functions are objects in javascript
 
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.fullName = function () {
+    console.log(
+      `My full name is ${this.firstName} ${this.lastName} and I love React`
+    );
+  };
+}
+
+const john = new Person("john", "sanders");
+// console.log(john.constructor);
+
+const bob = {};
+console.log(bob.constructor);
+const list = [];
+console.log(list.constructor);
+const sayHi = function () {};
+console.log(sayHi.constructor);
+
+const susy = new john.constructor("susy", "carpenter");
+susy.fullName();
 ```
 
 <br>
 
 ## Prototype Property<a id='214'></a>
 
-- index.html
-
-```html
-
-```
+- index.html (same template id=207)
 
 ---
 
 - app.js
 
 ```js
+/*
+Prototypal Inheritance Model
+Javascript uses prototypal inheritance model.
+That means that every constructor function/class has a prototype property,
+that is shared by every instance of the constructor/class.
+So any properties and methods or prototype can be acessed by every instance.
+prototype property returns a object
+*/
 
+// setup constructor function
+function Account(name, initialBalance) {
+  this.name = name;
+  this.balance = initialBalance;
+}
+
+// creating new obj
+const john = new Account("john", 200);
+const bob = new Account("bob", 0);
+
+// how to setup new bank-property using prototype-property in construction function
+Account.prototype.bank = "CHASE";
+
+// how to setup new deposit-function using prototype-property in construction function
+Account.prototype.deposit = function (amount) {
+  this.balance += amount;
+  console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+};
+
+console.log(john.bank);
+console.log(bob);
+
+john.deposit(300);
+bob.deposit(1000);
 ```
 
 <br>
 
 ## Property Lookup<a id='215'></a>
 
-- index.html
-
-```html
-
-```
+- index.html (same template id=207)
 
 ---
 
@@ -389,18 +492,41 @@ btn2.addEventListener("click", function () {
 
 ## ES6 Class Syntax<a id='216'></a>
 
-- index.html
-
-```html
-
-```
+- index.html (same template id=207)
 
 ---
 
 - app.js
 
 ```js
+class Account {
+  // notice: set bank-property without any let, const keyword
+  constructor(name, initialBalance) {
+    this.name = name;
+    this.balance = initialBalance;
+  }
 
+  // notice: set bank-property without any let, const keyword
+  bank = "Chase";
+
+  // notice: set deposit without function-keyword
+  deposit(amount) {
+    this.balance += amount;
+    console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+  }
+}
+
+const john = new Account("john", 0);
+console.log(john);
+console.log(john.name);
+john.deposit(500);
+console.log(john.bank);
+
+const bob = new Account("bob", 700);
+console.log(bob);
+console.log(bob.name);
+bob.deposit(1000);
+console.log(bob.bank);
 ```
 
 <br>
