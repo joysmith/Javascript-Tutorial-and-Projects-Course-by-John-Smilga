@@ -119,6 +119,36 @@ function boilWater(time) {
 
 ## Asynchronous<a id='309'></a>
 
+- index.html (same template id=307)
+
+---
+
+- app.js
+
+```js
+// Make Soup
+// boil water 10 min
+// chop carrots
+// add carrots boil for 5 min
+// chop onion
+// add onion boil for 5 min
+// BROWSER provide these function!!!!! Fetch Data, Get Geolocation, setTimeout, setTimer etc
+// callbacks, promises, async/await
+// -- asynchronous means doing things in background -- //
+
+boilWater(10000);
+console.log(`chop carrot`);
+
+function boilWater(time) {
+  console.log("boiling...");
+
+  // Hey JS give that setTimeout-fun to me, i'll handle it -chromeBrowser said to JS
+  setTimeout(() => {
+    console.log("done.");
+  }, time);
+}
+```
+
 <br>
 
 ## Callback Hell<a id='310'></a>
@@ -126,6 +156,65 @@ function boilWater(time) {
 <br>
 
 ## Callback Hell - DOM Example<a id='311'></a>
+
+- index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        text-align: center;
+      }
+      h1 {
+        letter-spacing: 2px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Asynchronous Javascript</h1>
+    <h1 class="one">hello world</h1>
+    <h1 class="two">hello people</h1>
+    <h1 class="three">hello Javascript</h1>
+    <button class="btn">click me</button>
+    <script src="./app.js"></script>
+  </body>
+</html>
+```
+
+---
+
+- app.js
+
+```js
+// callbacks, promises, async/await
+const heading1 = document.querySelector(".one");
+const heading2 = document.querySelector(".two");
+const heading3 = document.querySelector(".three");
+
+const btn = document.querySelector(".btn");
+
+btn.addEventListener("click", () => {
+  setTimeout(() => {
+    heading1.style.color = "red";
+    setTimeout(() => {
+      heading2.style.color = "green";
+      setTimeout(() => {
+        heading3.style.color = "blue";
+      }, 1000);
+    }, 2000);
+  }, 1000);
+
+  //
+});
+```
 
 <br>
 

@@ -1,21 +1,20 @@
-// Make Soup
-// boil water 10 min
-// chop carrots
-// add carrots boil for 5 min
-// chop onion
-// add onion boil for 5 min
-// BROWSER!!!!! Fetch Data, Get Geolocation, setTimeout, setTimer etc
+// callbacks, promises, async/await
+const heading1 = document.querySelector('.one');
+const heading2 = document.querySelector('.two');
+const heading3 = document.querySelector('.three');
 
-boilWater(100000);
-console.log(`chop carrot`);
-boilWater(5000);
-console.log(`chop onion`);
-boilWater(5000);
+const btn = document.querySelector('.btn');
 
-function boilWater(time) {
-  console.log('boiling...');
-  for (let i = 0; i < time; i++) {
-    console.log('still not done...');
-  }
-  console.log('done.');
-}
+btn.addEventListener('click', () => {
+  setTimeout(() => {
+    heading1.style.color = 'red';
+    setTimeout(() => {
+      heading2.style.color = 'green';
+      setTimeout(() => {
+        heading3.style.color = 'blue';
+      }, 1000);
+    }, 2000);
+  }, 1000);
+
+  //
+});
