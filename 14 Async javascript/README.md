@@ -220,20 +220,230 @@ btn.addEventListener("click", () => {
 
 ## Promises<a id='312'></a>
 
-<br>
+- index.html
 
-## Important Unsplash API update !!!!<a id='313'></a>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        text-align: center;
+      }
+      h1 {
+        letter-spacing: 2px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Asynchronous Javascript</h1>
+    <h1 class="one">hello world</h1>
+    <h1 class="two">hello people</h1>
+    <h1 class="three">hello Javascript</h1>
+    <button class="btn">click me</button>
+    <script src="./app.js"></script>
+  </body>
+</html>
+```
 
-<br>
+---
 
-## Reject Example<a id='314'></a>
+- app.js
+- Think promises as "Best Choice food Restaurant"
 
-<br>
+```js
+// callbacks, promises, async/await
+// PROMISES - Pending, Resolved, Rejected
+// then catch - pass another callback
+const heading1 = document.querySelector(".one");
+const heading2 = document.querySelector(".two");
+const heading3 = document.querySelector(".three");
 
-## Promises - DOM Example<a id='315'></a>
+const btn = document.querySelector(".btn");
 
-<br>
+btn.addEventListener("click", () => {});
 
-## Async/Await<a id='316'></a>
+// Think promises as "Best Choice food Restaurant"
+const promise = new Promise((resolve, reject) => {
+  let value = false;
+  if (value) {
+    resolve([1, 2, 4]);
+  } else {
+    reject(`there was a error, value is false`);
+  }
+});
 
-<br>
+promise
+  .then((taco) => {
+    console.log(taco);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
+<br />
+
+## Important Unsplash API update !!!!<a id="313"></a>
+
+<br />
+
+## Reject Example<a id="314"></a>
+
+- index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        text-align: center;
+      }
+      h1 {
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Asynchronous Javascript</h1>
+    <h1 class="one">hello world</h1>
+    <h1 class="two">hello people</h1>
+    <h1 class="three">hello Javascript</h1>
+    <div class="img-container">
+      <!-- <img src="https://source.unsplash.com/random" alt="random image" /> -->
+    </div>
+    <button class="btn">click me</button>
+    <script src="./app.js"></script>
+  </body>
+</html>
+```
+
+---
+
+- app.js
+- internet address api "https://source.unsplash.com/random"
+
+```js
+// callbacks, promises, async/await
+const heading1 = document.querySelector(".one");
+const heading2 = document.querySelector(".two");
+const heading3 = document.querySelector(".three");
+const btn = document.querySelector(".btn");
+const container = document.querySelector(".img-container");
+const url = "https://source.unsplash.com/random";
+
+btn.addEventListener("click", () => {
+  loadImage(url)
+    .then((taco) => container.appendChild(taco))
+    .catch((err) => console.log(err));
+});
+
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    let img = new Image();
+
+    img.addEventListener("load", () => {
+      resolve(img);
+    });
+    img.addEventListener("error", () => {
+      reject(new Error(`Failed to load image from the source : ${url}`));
+    });
+    img.src = url;
+  });
+}
+```
+
+<br />
+
+## Promises - DOM Example<a id="315"></a>
+
+- index.html
+
+```html
+
+```
+
+---
+
+- app.js
+
+```js
+
+```
+
+<br />
+
+## Async/Await<a id="316"></a>
+
+- index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        text-align: center;
+      }
+      h1 {
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Asynchronous Javascript</h1>
+    <h1 class="one">hello world</h1>
+    <h1 class="two">hello people</h1>
+    <h1 class="three">hello Javascript</h1>
+    <div class="img-container">
+      <!-- <img src="https://source.unsplash.com/random" alt="random image" /> -->
+    </div>
+    <button class="btn">click me</button>
+    <script src="./app.js"></script>
+  </body>
+</html>
+```
+
+---
+
+- app.js
+
+```js
+
+```
+
+<br />
+````
+
+```
+
+```
