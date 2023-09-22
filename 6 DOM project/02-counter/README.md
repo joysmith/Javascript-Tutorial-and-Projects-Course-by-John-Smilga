@@ -10,7 +10,7 @@
 
 > **_Business Objective: Layout_**
 
-<img src="notes/app.gif" width="400">
+<img src="notes/app.gif" >
 
 | Technology    | Description   |
 | ------------- | ------------- |
