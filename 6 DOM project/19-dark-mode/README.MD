@@ -27,7 +27,6 @@
 | `Language`    | html, css, js |
 | `Framework`   | -             |
 | `Library`     | moment.js     |
-| `Package`     | -             |
 | `Text editor` | Vs code       |
 
 <br>
