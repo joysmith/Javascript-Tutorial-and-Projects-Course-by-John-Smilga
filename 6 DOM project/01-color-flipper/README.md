@@ -1,14 +1,14 @@
-# Color flipper
+#### 131. [Color Flipper - Simple HTML](#131)
 
-- Download the starter template
-- In index.html create nav element
-  - link home page hyperlink
-  - link hex page hyperlink
-- In index.html create main element
+#### 132. [Color Flipper - Simple Javascript](#132)
 
-  - in main element, insert div element and inside it insert h2 with span, button element
+#### 133. [Color Flipper - Hex](#133)
 
-- In app.js
+---
+
+<br>
+
+### 131. Color Flipper - Simple HTML<a id="131"></a>
 
 > **_Business Objective: Layout_**
 
@@ -22,3 +22,23 @@
 | `Text editor` | Vs code       |
 
 ---
+
+- Download the starter template
+- In index.html create nav element
+  - link home page hyperlink
+  - link hex page hyperlink
+- In index.html create main element
+
+  - in main element, insert div element and inside it insert h2 with span, button element
+
+- In app.js
+
+<br>
+
+### 132. Color Flipper - Simple Javascript<a id="132"></a>
+
+<br>
+
+### 133. Color Flipper - Hex<a id="133"></a>
+
+<br>
