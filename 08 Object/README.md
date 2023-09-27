@@ -30,11 +30,11 @@
 
 <br>
 
-## Intro<a id='206'></a>
+## 206. Intro<a id='206'></a>
 
 <br>
 
-## Object Basics<a id='207'></a>
+## 207. Object Basics<a id='207'></a>
 
 - index.html
 
@@ -116,7 +116,7 @@ console.log(person);
 
 <br>
 
-## Nested Objects, Bracket Notation<a id='208'></a>
+## 208. Nested Objects, Bracket Notation<a id='208'></a>
 
 - index.html (same template id=207)
 
@@ -178,7 +178,7 @@ console.log(person[random]);
 
 <br>
 
-## 'this' - Keyword Basics<a id='209'></a>
+## 209. 'this' - Keyword Basics<a id='209'></a>
 
 - index.html (same template id=207)
 
@@ -217,7 +217,7 @@ bob.fullName();
 
 <br>
 
-## "this" - Keyword Advanced<a id='210'></a>
+## 210. "this" - Keyword Advanced<a id='210'></a>
 
 - index.html
 
@@ -299,7 +299,7 @@ btn2.addEventListener("click", function () {
 
 <br>
 
-## Factory Functions<a id='211'></a>
+## 211. Factory Functions<a id='211'></a>
 
 - index.html (same template id=207)
 
@@ -356,7 +356,7 @@ susy.fullName();
 
 <br>
 
-## Constructor Functions<a id='212'></a>
+## 212. Constructor Functions<a id='212'></a>
 
 - index.html (same template id=207)
 
@@ -391,7 +391,7 @@ bob.fullName();
 
 <br>
 
-## Constructor Property<a id='213'></a>
+## 213. Constructor Property<a id='213'></a>
 
 - index.html (same template id=207)
 
@@ -430,7 +430,7 @@ susy.fullName();
 
 <br>
 
-## Prototype Property<a id='214'></a>
+## 214. Prototype Property<a id='214'></a>
 
 - index.html (same template id=207)
 
@@ -476,7 +476,7 @@ bob.deposit(1000);
 
 <br>
 
-## Property Lookup<a id='215'></a>
+## 215. Property Lookup<a id='215'></a>
 
 - index.html (same template id=207)
 
@@ -490,7 +490,7 @@ bob.deposit(1000);
 
 <br>
 
-## ES6 Class Syntax<a id='216'></a>
+## 216. ES6 Class Syntax<a id='216'></a>
 
 - index.html (same template id=207)
 
@@ -531,7 +531,7 @@ console.log(bob.bank);
 
 <br>
 
-## Call<a id='217'></a>
+## 217. Call<a id='217'></a>
 
 - index.html
 
@@ -549,7 +549,7 @@ console.log(bob.bank);
 
 <br>
 
-## Apply, Arguments<a id='218'></a>
+## 218. Apply, Arguments<a id='218'></a>
 
 - index.html
 
@@ -567,7 +567,7 @@ console.log(bob.bank);
 
 <br>
 
-## Bind<a id='219'></a>
+## 219. Bind<a id='219'></a>
 
 - index.html
 
@@ -585,7 +585,7 @@ console.log(bob.bank);
 
 <br>
 
-## Button Example<a id='220'></a>
+## 220. Button Example<a id='220'></a>
 
 - index.html
 

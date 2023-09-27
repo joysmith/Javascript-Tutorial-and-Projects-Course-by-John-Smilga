@@ -27,11 +27,11 @@
 
 <br>
 
-## AJAX, HTTP, API<a id='318'></a>
+## 318. AJAX, HTTP, API<a id='318'></a>
 
 <br>
 
-## Simple Text<a id='319'></a>
+## 319. Simple Text<a id='319'></a>
 
 - create an api-folder and in it create sample.txt-file
 
@@ -116,7 +116,7 @@ console.log("hello world");
 
 <br>
 
-## Add Button<a id='320'></a>
+## 320. Add Button<a id='320'></a>
 
 - create an api-folder and in it create sample.txt-file
 
@@ -194,7 +194,7 @@ function getData() {
 
 <br>
 
-## JSON<a id='321'></a>
+## 321. JSON<a id='321'></a>
 
 - create an api-folder and in it create people.json-file
 
@@ -296,7 +296,7 @@ function getData(url) {
 
 <br>
 
-## Fetch<a id='322'></a>
+## 322. Fetch<a id='322'></a>
 
 - create an api-folder and in it create people.json-file
 
@@ -382,22 +382,22 @@ fetch(url)
 
 <br>
 
-## Fetch - Errors "gotcha"<a id='323'></a>
+## 323. Fetch - Errors "gotcha"<a id='323'></a>
 
 <br>
 
-## Fetch - Big Picture<a id='324'></a>
+## 324. Fetch - Big Picture<a id='324'></a>
 
 <br>
 
-## Fetch with Function<a id='325'></a>
+## 325. Fetch with Function<a id='325'></a>
 
 <br>
 
-## Fetch - with async/await<a id='326'></a>
+## 326. Fetch - with async/await<a id='326'></a>
 
 <br>
 
-## Try / Catch<a id='327'></a>
+## 327. Try / Catch<a id='327'></a>
 
 <br>

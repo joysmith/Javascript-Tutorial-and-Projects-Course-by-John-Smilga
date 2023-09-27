@@ -14,11 +14,11 @@
 
 <br>
 
-## Intro<a id='238'></a>
+## 238. Intro<a id='238'></a>
 
 <br>
 
-## IIFE<a id='239'></a>
+## 239. IIFE<a id='239'></a>
 
 ```html
 <!DOCTYPE html>
@@ -99,7 +99,7 @@ console.log(result);
 
 <br>
 
-## Hoisting<a id='240'></a>
+## 240. Hoisting<a id='240'></a>
 
 - index.html (same template id=239)
 
@@ -135,7 +135,7 @@ function moreComplex() {
 
 <br>
 
-## Closure<a id='241'></a>
+## 241. Closure<a id='241'></a>
 
 - index.html (same template id=239)
 
@@ -169,7 +169,7 @@ value();
 
 <br>
 
-## Closure - Basic Example<a id='242'></a>
+## 242. Closure - Basic Example<a id='242'></a>
 
 - index.html (same template id=239)
 
@@ -201,6 +201,6 @@ bob();
 
 <br>
 
-## Closure - Complete Example<a id='243'></a>
+## 243. Closure - Complete Example<a id='243'></a>
 
 <br>

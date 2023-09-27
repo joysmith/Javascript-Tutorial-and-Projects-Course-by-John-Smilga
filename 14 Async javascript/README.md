@@ -24,11 +24,11 @@
 
 <br>
 
-## Intro<a id='306'></a>
+## 306. Intro<a id='306'></a>
 
 <br>
 
-## Synchronous<a id='307'></a>
+## 307. Synchronous<a id='307'></a>
 
 -index.html
 
@@ -83,7 +83,7 @@ function boilingWater() {
 
 <br>
 
-## Recipe Example<a id='308'></a>
+## 308. Recipe Example<a id='308'></a>
 
 - index.html (same template id=307)
 
@@ -117,7 +117,7 @@ function boilWater(time) {
 
 <br>
 
-## Asynchronous<a id='309'></a>
+## 309. Asynchronous<a id='309'></a>
 
 - index.html (same template id=307)
 
@@ -151,11 +151,11 @@ function boilWater(time) {
 
 <br>
 
-## Callback Hell<a id='310'></a>
+## 310. Callback Hell<a id='310'></a>
 
 <br>
 
-## Callback Hell - DOM Example<a id='311'></a>
+## 311. Callback Hell - DOM Example<a id='311'></a>
 
 - index.html
 
@@ -218,7 +218,7 @@ btn.addEventListener("click", () => {
 
 <br>
 
-## Promises<a id='312'></a>
+## 312. Promises<a id='312'></a>
 
 - index.html
 
@@ -290,11 +290,11 @@ promise
 
 <br />
 
-## Important Unsplash API update !!!!<a id="313"></a>
+## 313. Important Unsplash API update !!!!<a id="313"></a>
 
 <br />
 
-## Reject Example<a id="314"></a>
+## 314. Reject Example<a id="314"></a>
 
 - index.html
 
@@ -373,7 +373,7 @@ function loadImage(url) {
 
 <br />
 
-## Promises - DOM Example<a id="315"></a>
+## 315. Promises - DOM Example<a id="315"></a>
 
 - index.html
 
@@ -391,7 +391,7 @@ function loadImage(url) {
 
 <br />
 
-## Async/Await<a id="316"></a>
+## 316. Async/Await<a id="316"></a>
 
 - index.html
 
