@@ -1,102 +1,45 @@
-#### 88. [DOM - Intro](#88)
-
-#### 89. [DOM - General Concepts](#89)
-
-#### 90. [Window and Document Overview](#90)
-
-#### 91. [Get Element By ID](#91)
-
-#### 92. [Get Elements By Tag Name](#92)
-
-#### 93. [Get Element By Class Name](#93)
-
-#### 94. [Query Selector and Query Selector ALL](#94)
-
-#### 95. [Navigate the DOM - Children](#95)
-
-#### 96. [Navigate the DOM - parentElement](#96)
-
-#### 97. [Navigate the DOM - nextSibling, previousSibling](#97)
-
-#### 98. [Navigate the DOM - nextElementSibling, previousElementSibling](#98)
-
-#### 99. [textContent nodeValue](#99)
-
-#### 100. [getAttribute() setAttribute()](#100)
-
-#### 101. [classList and className](#101)
-
-#### 102. [createElement - createTextNode - appendChild](#102)
-
-#### 103. [insertBefore](#103)
-
-#### 104. [replaceChild](#104)
-
-#### 105. [prepend innerText](#105)
-
-#### 106. [remove removeChild](#106)
-
-#### 107. [innerHTML and textContent](#107)
-
-#### 108. [Change CSS with style property](#108)
-
-#### 109. [Events Overview](#109)
-
-#### 110. [Click Event](#110)
-
-#### 111. [Function Reference](#111)
-
-#### 112. [Mouse Events](#112)
-
-#### 113. [Key Events](#113)
-
-#### 114. [Event Object](#114)
-
-#### 115. [CurrentTarget vs Target](#115)
-
-#### 116. [Event Propagation - Bubbling- Capturing](#116)
-
-#### 117. [Event Propagation Example](#117)
-
-#### 118. [Forms](#118)
-
-#### 119. [Local Storage](#119)
-
-#### 120. [Local Storage With Multiple Values](#120)
-
-#### 121. [setTimeout](#121)
-
-#### 122. [setInterval](#122)
-
-#### 123. [Events - "DOMContentLoaded"](#123)
-
-#### 124. [Events - "load"](#124)
-
-#### 125. [Events - "scroll"](#125)
-
-#### 126. [Width, Height, GetBoundingClientRect](#126)
-
-#### 127. [Events - "resize"](#127)
+| Index                                                                    | Index                                                |
+| ------------------------------------------------------------------------ | ---------------------------------------------------- |
+| 88. [DOM - Intro](#88)                                                   | 108. [Change CSS with style property](#108)          |
+| 89. [DOM - General Concepts](#89)                                        | 109. [Events Overview](#109)                         |
+| 90. [Window and Document Overview](#90)                                  | 110. [Click Event](#110)                             |
+| 91. [Get Element By ID](#91)                                             | 111. [Function Reference](#111)                      |
+| 92. [Get Elements By Tag Name](#92)                                      | 112. [Mouse Events](#112)                            |
+| 93. [Get Element By Class Name](#93)                                     | 113. [Key Events](#113)                              |
+| 94. [Query Selector and Query Selector ALL](#94)                         | 114. [Event Object](#114)                            |
+| 95. [Navigate the DOM - Children](#95)                                   | 115. [CurrentTarget vs Target](#115)                 |
+| 96. [Navigate the DOM - parentElement](#96)                              | 116. [Event Propagation - Bubbling- Capturing](#116) |
+| 97. [Navigate the DOM - nextSibling, previousSibling](#97)               | 117. [Event Propagation Example](#117)               |
+| 98. [Navigate the DOM - nextElementSibling, previousElementSibling](#98) | 118. [Forms](#118)                                   |
+| 99. [textContent nodeValue](#99)                                         | 119. [Local Storage](#119)                           |
+| 100. [getAttribute() setAttribute()](#100)                               | 120. [Local Storage With Multiple Values](#120)      |
+| 101. [classList and className](#101)                                     | 121. [setTimeout](#121)                              |
+| 102. [createElement - createTextNode - appendChild](#102)                | 122. [setInterval](#122)                             |
+| 103. [insertBefore](#103)                                                | 123. [Events - "DOMContentLoaded"](#123)             |
+| 104. [replaceChild](#104)                                                | 124. [Events - "load"](#124)                         |
+| 105. [prepend innerText](#105)                                           | 125. [Events - "scroll"](#125)                       |
+| 106. [remove removeChild](#106)                                          | 126. [Width, Height, GetBoundingClientRect](#126)    |
+| 107. [innerHTML and textContent](#107)                                   | 127. [Events - "resize"](#127)                       |
 
 <br>
 
-## DOM - Intro <a id='88'></a>
+## 88. DOM - Intro <a id='88'></a>
 
 <br>
 
-## DOM - General Concept <a id='89'></a>
+## 89. DOM - General Concept <a id='89'></a>
 
 <br>
 
-## Window and Document Overvie <a id='90'></a>
+## 90. Window and Document Overvie <a id='90'></a>
 
 <br>
 
-## Get Element By Id <a id='91'></a>
+## 91. Get Element By Id <a id='91'></a>
 
 <br>
 
-## Get Elements By Tag Name <a id='92'></a>
+## 92. Get Elements By Tag Name <a id='92'></a>
 
 - index.html
 
@@ -169,7 +112,7 @@ console.log(betterItems);
 
 <br>
 
-## Get Element By Class Name <a id='93'></a>
+## 93. Get Element By Class Name <a id='93'></a>
 
 - index.html
 
@@ -224,7 +167,7 @@ console.log(listItems);
 
 <br>
 
-## Query Selector and Query Selector ALL <a id='94'></a>
+## 94. Query Selector and Query Selector ALL <a id='94'></a>
 
 - index.html
 
@@ -288,7 +231,7 @@ list.forEach(function (item) {
 
 <br>
 
-## Navigate the DOM - Children <a id='95'></a>
+## 95. Navigate the DOM - Children <a id='95'></a>
 
 - index.html
 
@@ -350,11 +293,11 @@ console.log(result.lastChild);
 
 <br>
 
-## Navigate the DOM - parentElement <a id='96'></a>
+## 96. Navigate the DOM - parentElement <a id='96'></a>
 
 <br>
 
-## Navigate the DOM - nextSibling, previousSibling <a id='97'></a>
+## 97. Navigate the DOM - nextSibling, previousSibling <a id='97'></a>
 
 - index.html
 
@@ -409,7 +352,7 @@ console.log(last.nextSibling.nextSibling);
 
 <br>
 
-## Navigate the DOM - nextElementSibling, previousElementSibling <a id='98'></a>
+## 98. Navigate the DOM - nextElementSibling, previousElementSibling <a id='98'></a>
 
 - index.html
 
@@ -427,7 +370,7 @@ console.log(last.nextSibling.nextSibling);
 
 <br>
 
-## textContent nodeValue <a id='99'></a>
+## 99. textContent nodeValue <a id='99'></a>
 
 - index.html
 
@@ -445,7 +388,7 @@ console.log(last.nextSibling.nextSibling);
 
 <br>
 
-## getAttribute() setAttribute() <a id='100'></a>
+## 100. getAttribute() setAttribute() <a id='100'></a>
 
 - index.html
 
@@ -463,7 +406,7 @@ console.log(last.nextSibling.nextSibling);
 
 <br>
 
-## classList and className <a id='101'></a>
+## 101. classList and className <a id='101'></a>
 
 - index.html
 
@@ -481,7 +424,7 @@ console.log(last.nextSibling.nextSibling);
 
 <br>
 
-## createElement - createTextNode - appendChild <a id='102'></a>
+## 102. createElement - createTextNode - appendChild <a id='102'></a>
 
 - index.html
 
@@ -499,7 +442,7 @@ console.log(last.nextSibling.nextSibling);
 
 <br>
 
-## insertBefore <a id='103'></a>
+## 103. insertBefore <a id='103'></a>
 
 - index.html
 
@@ -517,27 +460,27 @@ console.log(last.nextSibling.nextSibling);
 
 <br>
 
-## replaceChild <a id='104'></a>
+## 104. replaceChild <a id='104'></a>
 
 <br>
 
-## prepend innerText <a id='105'></a>
+## 105. prepend innerText <a id='105'></a>
 
 <br>
 
-## remove removeChild <a id='106'></a>
+## 106. remove removeChild <a id='106'></a>
 
 <br>
 
-## innerHTML and textContent <a id='107'></a>
+## 107. innerHTML and textContent <a id='107'></a>
 
 <br>
 
-## Change CSS with style property <a id='108'></a>
+## 108. Change CSS with style property <a id='108'></a>
 
 <br>
 
-## Events Overview <a id='109'></a>
+## 109. Events Overview <a id='109'></a>
 
 - index.html
 
@@ -610,7 +553,7 @@ btn.addEventListener("click", function () {
 
 <br>
 
-## Click Event <a id='110'></a>
+## 110. Click Event <a id='110'></a>
 
 - index.html
 
@@ -678,7 +621,7 @@ btn.addEventListener("click", function () {
 
 <br>
 
-## Function Reference <a id='111'></a>
+## 111. Function Reference <a id='111'></a>
 
 - index.html
 
@@ -750,7 +693,7 @@ btn.addEventListener("click", changeColors);
 
 <br>
 
-## Mouse Events <a id='112'></a>
+## 112. Mouse Events <a id='112'></a>
 
 - index.html
 
@@ -835,7 +778,7 @@ heading.addEventListener("mouseleave", function () {
 
 <br>
 
-## Key Events <a id='113'></a>
+## 113. Key Events <a id='113'></a>
 
 - index.html
 
@@ -904,7 +847,7 @@ nameInput.addEventListener("keyup", function () {
 
 <br>
 
-## Event Object <a id='114'></a>
+## 114. Event Object <a id='114'></a>
 
 - index.html
 
@@ -986,7 +929,7 @@ link.addEventListener("click", someFunc);
 
 <br>
 
-## CurrentTarget vs Target <a id='115'></a>
+## 115. CurrentTarget vs Target <a id='115'></a>
 
 - index.html
 
@@ -1062,7 +1005,7 @@ btns.forEach((btn) => {
 
 <br>
 
-## Event Propagation - Bubbling- Capturing <a id='116'></a>
+## 116. Event Propagation - Bubbling- Capturing <a id='116'></a>
 
 - index.html
 
@@ -1143,7 +1086,7 @@ window.addEventListener("click", showBubbling, { capture: true });
 
 <br>
 
-## Event Propagation Example <a id='117'></a>
+## 117. Event Propagation Example <a id='117'></a>
 
 - index.html
 
@@ -1161,7 +1104,7 @@ window.addEventListener("click", showBubbling, { capture: true });
 
 <br>
 
-## Forms <a id='118'></a>
+## 118. Forms <a id='118'></a>
 
 - index.html
 
@@ -1233,7 +1176,7 @@ form.addEventListener("submit", function (e) {
 
 <br>
 
-## Local Storage <a id='119'></a>
+## 119. Local Storage <a id='119'></a>
 
 - index.html
 
@@ -1303,7 +1246,7 @@ localStorage.clear();
 
 <br>
 
-## Local Storage With Multiple Values <a id='120'></a>
+## 120. Local Storage With Multiple Values <a id='120'></a>
 
 - index.html
 
@@ -1371,7 +1314,7 @@ localStorage.setItem("fruits", JSON.stringify(fruits));
 
 <br>
 
-## setTimeout <a id='121'></a>
+## 121. setTimeout <a id='121'></a>
 
 - index.html
 
@@ -1389,7 +1332,7 @@ localStorage.setItem("fruits", JSON.stringify(fruits));
 
 <br>
 
-## setInterval <a id='122'></a>
+## 122. setInterval <a id='122'></a>
 
 - index.html
 
@@ -1407,7 +1350,7 @@ localStorage.setItem("fruits", JSON.stringify(fruits));
 
 <br>
 
-## Events - "DOMContentLoaded" <a id='123'></a>
+## 123. Events - "DOMContentLoaded" <a id='123'></a>
 
 - index.html
 
@@ -1425,7 +1368,7 @@ localStorage.setItem("fruits", JSON.stringify(fruits));
 
 <br>
 
-## Events - "load" <a id='124'></a>
+## 124. Events - "load" <a id='124'></a>
 
 - index.html
 
@@ -1483,7 +1426,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 <br>
 
-## Events - "scroll" <a id='125'></a>
+## 125. Events - "scroll" <a id='125'></a>
 
 - index.html
 
@@ -1533,7 +1476,7 @@ window.addEventListener("scroll", function () {
 
 <br>
 
-## Width, Height, GetBoundingClientRect <a id='126'></a>
+## 126. Width, Height, GetBoundingClientRect <a id='126'></a>
 
 - index.html
 
@@ -1596,7 +1539,7 @@ btn.addEventListener("click", function () {
 
 <br>
 
-## Events - "resize" <a id='127'></a>
+## 127. Events - "resize" <a id='127'></a>
 
 - index.html
 
