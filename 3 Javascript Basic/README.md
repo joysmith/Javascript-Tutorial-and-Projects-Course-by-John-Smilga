@@ -1,84 +1,26 @@
-#### 14. [Basics Intro](#14)
-
-#### 15. [Basic Project](#15)
-
-#### 16. [Inline Javascript](#16)
-
-#### 17. [Internal Javascript](#17)
-
-#### 18. [External Javascript](#18)
-
-#### 19. [Cleanup Workspace](#19)
-
-#### 20. [Helper Methods](#20)
-
-#### 21. [Statements and Comments](#21)
-
-#### 22. [Variables](#22)
-
-#### 23. [Assign Variable Value Later](#23)
-
-#### 24. [Variable Naming Rules](#24)
-
-#### 25. [const, let, var](#25)
-
-#### 26. [Challenges Intro](#26)
-
-#### 27. [Variables Challange](#27)
-
-#### 28. [Prettier Settings](#28)
-
-#### 29. [Quotation Marks](#29)
-
-#### 30. [String Concatenation](#30)
-
-#### 31. [String Concat Challenge](#31)
-
-#### 32. [Numbers Basics](#32)
-
-#### 33. [Numbers - Additional Features](#33)
-
-#### 34. [Numbers Challenge](#34)
-
-#### 35. [Implicit Type Conversion](#35)
-
-#### 36. [Data Types](#36)
-
-#### 37. [Arrays](#37)
-
-#### 38. [Array Challenge](#38)
-
-#### 39. [Functions - Declare, Invoke](#39)
-
-#### 40. [Functions - Parameters, Arguments](#40)
-
-#### 41. [Functions - Return](#41)
-
-#### 42. [Function Expressions](#42)
-
-#### 43. [Function Challenge](#43)
-
-#### 44. [Objects](#44)
-
-#### 45. [Object Challenge](#45)
-
-#### 46. [Conditional Statements - Basics](#46)
-
-#### 47. [Conditional Statements Continued](#47)
-
-#### 48. [Equality](#48)
-
-#### 49. [Logical Operators](#49)
-
-#### 50. [Switch Statement](#50)
-
-#### 51. [Conditionals Challenge](#51)
-
-#### 52. [while Loops](#52)
-
-#### 53. [do while loops](#53)
-
-#### 54. [for loop](#54)
+| Index                                    | Index                                        |
+| ---------------------------------------- | -------------------------------------------- |
+| 14. [Basics Intro](#14)                  | 35. [Implicit Type Conversion](#35)          |
+| 15. [Basic Project](#15)                 | 36. [Data Types](#36)                        |
+| 16. [Inline Javascript](#16)             | 37. [Arrays](#37)                            |
+| 17. [Internal Javascript](#17)           | 38. [Array Challenge](#38)                   |
+| 18. [External Javascript](#18)           | 39. [Functions - Declare, Invoke](#39)       |
+| 19. [Cleanup Workspace](#19)             | 40. [Functions - Parameters, Arguments](#40) |
+| 20. [Helper Methods](#20)                | 41. [Functions - Return](#41)                |
+| 21. [Statements and Comments](#21)       | 42. [Function Expressions](#42)              |
+| 22. [Variables](#22)                     | 43. [Function Challenge](#43)                |
+| 23. [Assign Variable Value Later](#23)   | 44. [Objects](#44)                           |
+| 24. [Variable Naming Rules](#24)         | 45. [Object Challenge](#45)                  |
+| 25. [const, let, var](#25)               | 46. [Conditional Statements - Basics](#46)   |
+| 26. [Challenges Intro](#26)              | 47. [Conditional Statements Continued](#47)  |
+| 27. [Variables Challange](#27)           | 48. [Equality](#48)                          |
+| 28. [Prettier Settings](#28)             | 49. [Logical Operators](#49)                 |
+| 29. [Quotation Marks](#29)               | 50. [Switch Statement](#50)                  |
+| 30. [String Concatenation](#30)          | 51. [Conditionals Challenge](#51)            |
+| 31. [String Concat Challenge](#31)       | 52. [while Loops](#52)                       |
+| 32. [Numbers Basics](#32)                | 53. [do while loops](#53)                    |
+| 33. [Numbers - Additional Features](#33) | 54. [for loop](#54)                          |
+| 34. [Numbers Challenge](#34)             |
 
 ---
 
