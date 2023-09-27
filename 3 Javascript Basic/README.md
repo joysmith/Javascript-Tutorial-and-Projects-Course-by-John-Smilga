@@ -26,15 +26,15 @@
 
 <br>
 
-## Basics Intro <a id='14'></a>
+## 14. Basics Intro <a id='14'></a>
 
 <br>
 
-## Basic Project <a id='15'></a>
+## 15. Basic Project <a id='15'></a>
 
 <br>
 
-## Inline Javascript <a id='16'></a>
+## 16. Inline Javascript <a id='16'></a>
 
 ```js
 <!DOCTYPE html>
@@ -57,7 +57,7 @@
 
 <br>
 
-## Internal Javascript <a id='17'></a>
+## 17. Internal Javascript <a id='17'></a>
 
 ```js
 <!DOCTYPE html>
@@ -95,7 +95,7 @@
 
 <br>
 
-## External Javascript <a id='18'></a>
+## 18. External Javascript <a id='18'></a>
 
 - index.html
 
@@ -171,11 +171,11 @@ document.querySelectorAll(".btn").forEach((item) => {
 
 <br>
 
-## Cleanup Workspace <a id='19'></a>
+## 19. Cleanup Workspace <a id='19'></a>
 
 <br>
 
-## Helper Methods <a id='20'></a>
+## 20. Helper Methods <a id='20'></a>
 
 - index.html
 
@@ -213,7 +213,7 @@ console.log("hello world");
 
 <br>
 
-## Statements and Comments <a id='21'></a>
+## 21. Statements and Comments <a id='21'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -238,7 +238,7 @@ document.write("hello anna");
 
 <br>
 
-## Variables <a id='22'></a>
+## 22. Variables <a id='22'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -268,7 +268,7 @@ console.log(name);
 
 <br>
 
-## Assign Variable Value Later <a id='23'></a>
+## 23. Assign Variable Value Later <a id='23'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -296,7 +296,7 @@ console.log(name);
 
 <br>
 
-## Variable Naming Rules <a id='24'></a>
+## 24. Variable Naming Rules <a id='24'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -318,7 +318,7 @@ console.log(full_name);
 
 <br>
 
-## const, let, var <a id='25'></a>
+## 25. const, let, var <a id='25'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -342,11 +342,11 @@ console.log(lastName);
 
   <br>
 
-## Challenges Intro <a id='26'></a>
+## 26. Challenges Intro <a id='26'></a>
 
 <br>
 
-## Variables Challange <a id='27'></a>
+## 27. Variables Challange <a id='27'></a>
 
 Variables #1
 
@@ -375,11 +375,11 @@ console.log(firstName, last_name, address);
 
 <br>
 
-## Prettier Settings <a id='28'></a>
+## 28. Prettier Settings <a id='28'></a>
 
 <br>
 
-## Quotation Marks <a id='29'></a>
+## 29. Quotation Marks <a id='29'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -393,7 +393,7 @@ console.log(name);
 
 <br>
 
-## String Concatenation <a id='30'></a>
+## 30. String Concatenation <a id='30'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -420,7 +420,7 @@ console.log(url);
 
 <br>
 
-## String Concat Challenge <a id='31'></a>
+## 31. String Concat Challenge <a id='31'></a>
 
 Concatenate Strings #2
 
@@ -448,7 +448,7 @@ console.log(fullMailingAddress);
 
 <br>
 
-## Numbers Basics <a id='32'></a>
+## 32. Numbers Basics <a id='32'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -478,7 +478,7 @@ console.log(number3);
 
 <br>
 
-## Numbers - Additional Features <a id='33'></a>
+## 33. Numbers - Additional Features <a id='33'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -513,7 +513,7 @@ console.log(amount);
 
 <br>
 
-## Numbers Challenge <a id='34'></a>
+## 34. Numbers Challenge <a id='34'></a>
 
 Numbers #3
 
@@ -553,7 +553,7 @@ console.log(message);
 
 <br>
 
-## Implicit Type Conversion <a id='35'></a>
+## 35. Implicit Type Conversion <a id='35'></a>
 
 - index.html
 
@@ -618,7 +618,7 @@ document.querySelector(".form").addEventListener("submit", function (e) {
 
 <br>
 
-## Data Types <a id='36'></a>
+## 36. Data Types <a id='36'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -660,7 +660,7 @@ console.log(typeof name);
 
 <br>
 
-## Arrays <a id='37'></a>
+## 37. Arrays <a id='37'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -693,7 +693,7 @@ console.log(friends[3]);
 
 <br>
 
-## Array Challenge <a id='38'></a>
+## 38. Array Challenge <a id='38'></a>
 
 Arrays #4
 
@@ -720,7 +720,7 @@ console.log(firstFruit, fruits);
 
 <br>
 
-## Functions - Declare, Invoke <a id='39'></a>
+## 39. Functions - Declare, Invoke <a id='39'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -748,7 +748,7 @@ hello();
 
 <br>
 
-## Functions - Parameters, Arguments <a id='40'></a>
+## 40. Functions - Parameters, Arguments <a id='40'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -779,7 +779,7 @@ greet("Susy");
 
 <br>
 
-## Functions - Return <a id='41'></a>
+## 41. Functions - Return <a id='41'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -811,7 +811,7 @@ console.log(dimensions);
 
 <br>
 
-## Function Expressions <a id='42'></a>
+## 42. Function Expressions <a id='42'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -846,7 +846,7 @@ const multiply = (num1, num2) => num1 * num2;
 
 <br>
 
-## Function Challenge <a id='43'></a>
+## 43. Function Challenge <a id='43'></a>
 
 Functions #5
 
@@ -884,7 +884,7 @@ console.log(order1, order2, order3);
 
 <br>
 
-## Objects <a id='44'></a>
+## 44. Objects <a id='44'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -924,7 +924,7 @@ person.greeting();
 
 <br>
 
-## Object Challenge <a id='45'></a>
+## 45. Object Challenge <a id='45'></a>
 
 Objects #6
 
@@ -967,7 +967,7 @@ car.stop();
 
 <br>
 
-## Conditional Statements - Basics <a id='46'></a>
+## 46. Conditional Statements - Basics <a id='46'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -989,7 +989,7 @@ if (value2) {
 
 <br>
 
-## Conditional Statements Continued <a id='47'></a>
+## 47. Conditional Statements Continued <a id='47'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -1023,7 +1023,7 @@ if (!value) {
 
 <br>
 
-## Equality <a id='48'></a>
+## 48. Equality <a id='48'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -1050,7 +1050,7 @@ console.log(value2);
 
 <br>
 
-## Logical Operators <a id='49'></a>
+## 49. Logical Operators <a id='49'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -1071,7 +1071,7 @@ if (name !== "bob" && age === 24) {
 
 <br>
 
-## Switch Statement <a id='50'></a>
+## 50. Switch Statement <a id='50'></a>
 
 - index.html (same template id=20)
 - app.js
@@ -1119,7 +1119,7 @@ switch (dice) {
 
 <br>
 
-## Conditionals Challenge <a id='51'></a>
+## 51. Conditionals Challenge <a id='51'></a>
 
 Conditional Statements #7
 
@@ -1161,15 +1161,15 @@ if (person2.age >= 18 && person2.status === "resident") {
 
 <br>
 
-## while Loops <a id='52'></a>
+## 52. while Loops <a id='52'></a>
 
 <br>
 
-## do while loops <a id='53'></a>
+## 53. do while loops <a id='53'></a>
 
 <br>
 
-## for loop <a id='54'></a>
+## 54. for loop <a id='54'></a>
 
 <br>
 ```
